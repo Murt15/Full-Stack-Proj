@@ -1,21 +1,23 @@
+//importing all the required packages
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-
+//initializing dotenv
 const dotenv = require("dotenv");
-const dataRoutes = require("./routes/dataroutes");
 dotenv.config();
-
+//importing data Routes from the routes folder
+const dataRoutes = require("./routes/dataroutes");
+//importing mongoose for database connection
 const mongoose = require("mongoose");
-
+//initializing express
 const app = express();
-
+//initializing cors and body parser
 app.use(cors());
 
 app.use(bodyParser.json({ extended: false }));
-
+//using the data routes
 app.use(dataRoutes);
-
+//setting up the connection with database and initializing express on port 5000
 mongoose
   .connect(process.env.URL)
   .then(() => {
