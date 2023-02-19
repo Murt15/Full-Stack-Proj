@@ -18,7 +18,7 @@ const Buttons = () => {
       </div>
       <div className="home-img-div">
         <img
-          src="https://cdn-icons-png.flaticon.com/512/15/15766.png"
+          src="https://icon-library.com/images/home-icon-transparent-background/home-icon-transparent-background-20.jpg"
           alt="home"
           onClick={() => {
             navigate("/menu");

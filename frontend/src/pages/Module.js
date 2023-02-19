@@ -23,7 +23,7 @@ const Module = () => {
   async function getData(tab = "Tab 1") {
     try {
       //network call through axios to  backend  server for getting data
-      const res = await axios.get("http://localhost:5000/getData", {
+      const res = await axios.get("http://52.198.200.5:5000/getData", {
         headers: { heading: state.name, tab: tab },
       });
       //setting data

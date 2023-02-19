@@ -16,7 +16,7 @@ const Search = () => {
   //seacrh handler for searching data
   const searchHandler = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/searchData", {
+      const res = await axios.get("http://52.198.200.5:5000/searchData", {
         headers: { heading: searchText },
       });
 
@@ -29,7 +29,7 @@ const Search = () => {
     <>
       <div className="home-img-div">
         <img
-          src="https://cdn-icons-png.flaticon.com/512/15/15766.png"
+          src="https://icon-library.com/images/home-icon-transparent-background/home-icon-transparent-background-20.jpg"
           alt="home"
           onClick={() => {
             navigate("/");
