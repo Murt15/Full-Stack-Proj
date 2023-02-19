@@ -15,11 +15,15 @@ const Search = () => {
   const [searchText, setSearchText] = useState("");
   //seacrh handler for searching data
   const searchHandler = async () => {
-    const res = await axios.get("http://localhost:5000/searchData", {
-      headers: { heading: searchText },
-    });
+    try {
+      const res = await axios.get("http://localhost:5000/searchData", {
+        headers: { heading: searchText },
+      });
 
-    setData(res.data);
+      setData(res.data);
+    } catch (err) {
+      console.log(err);
+    }
   };
   return (
     <>

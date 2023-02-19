@@ -21,12 +21,16 @@ const Module = () => {
   // console.log(heading);
 
   async function getData(tab = "Tab 1") {
-    //network call through axios to  backend  server for getting data
-    const res = await axios.get("http://localhost:5000/getData", {
-      headers: { heading: state.name, tab: tab },
-    });
-    //setting data
-    setData(res.data[0]);
+    try {
+      //network call through axios to  backend  server for getting data
+      const res = await axios.get("http://localhost:5000/getData", {
+        headers: { heading: state.name, tab: tab },
+      });
+      //setting data
+      setData(res.data[0]);
+    } catch (err) {
+      console.log(err);
+    }
   }
 
   useEffect(() => {
