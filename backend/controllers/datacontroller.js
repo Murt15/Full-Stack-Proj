@@ -19,10 +19,13 @@ exports.searchData = async (req, res) => {
   try {
     const heading = req.headers.heading;
     //finding data with respect to heading
-    const response = await Data.find({ heading: heading });
+    const response = await Data.find({
+      heading: { $regex: new RegExp(`${heading}`, "i") },
+    });
     //sending response to client
     res.status(200).json(response);
   } catch (err) {
-    res.status(404).json(error);
+    console.log(err);
+    res.status(404).json(err);
   }
 };
