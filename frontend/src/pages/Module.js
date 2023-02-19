@@ -1,15 +1,19 @@
 import "./Module.css";
-import { useEffect, useState, useRef } from "react";
-import axios from "axios";
+//importing the dependencies from react and react-router-dom
 import { useLocation } from "react-router-dom";
+import { useEffect, useState, useRef } from "react";
+//importing axios for network calls
+import axios from "axios";
+//importing the other smaller components
 import Buttons from "../components/UI/Button";
 import SubModule from "../components/SubModule";
 
 const Module = () => {
+  //setting up useState
   const [data, setData] = useState(null);
-
+  //setting up useRefs
   const dataFetchedRef = useRef(false);
-
+  //setting state
   const { state } = useLocation();
 
   const heading = state.name;
@@ -17,16 +21,16 @@ const Module = () => {
   // console.log(heading);
 
   async function getData(tab = "Tab 1") {
-    // console.log("1");
-
+    //network call through axios to  backend  server for getting data
     const res = await axios.get("http://localhost:5000/getData", {
       headers: { heading: state.name, tab: tab },
     });
-
+    //setting data
     setData(res.data[0]);
   }
 
   useEffect(() => {
+    //function for calling the backend only once
     if (dataFetchedRef.current) return;
 
     dataFetchedRef.current = true;

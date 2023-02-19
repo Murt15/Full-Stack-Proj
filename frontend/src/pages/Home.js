@@ -1,6 +1,8 @@
 import "./Home.css";
 import { useNavigate } from "react-router-dom";
-const Home = (props) => {
+//function for the Home component
+const Home = () => {
+  //initializing navigate from  the useNavigate Hook
   const navigate = useNavigate();
   return (
     <>
@@ -18,7 +20,7 @@ const Home = (props) => {
         <button
           className="home-div_button"
           onClick={() => {
-            navigate("/menu");
+            navigate("/menu"); //navigating to the menu page on click
           }}
         >
           Enter <span>→</span>

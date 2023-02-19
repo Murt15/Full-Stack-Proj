@@ -1,3 +1,4 @@
+//importing the submodule css file
 import "./SubModule.css";
 
 const SubModule = (props) => {

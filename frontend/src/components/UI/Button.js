@@ -1,6 +1,9 @@
+//requiring the css file
 import "./Buttons.css";
+//importing useNavigate from react-router-dom
 import { useNavigate } from "react-router-dom";
 const Buttons = () => {
+  //setting up useNavigate Hooks
   const navigate = useNavigate();
   return (
     <>

@@ -1,12 +1,10 @@
 import "./Menu.css";
 import { useNavigate } from "react-router-dom";
-const Menu = (props) => {
+const Menu = () => {
+  //initializing navigate from  the useNavigate Hook
   const navigate = useNavigate();
+  //li handler function for handling onClick on the li Element
   const liHandler = async (name) => {
-    // const res = await axios.get("http://localhost:5000/getData", {
-    //   headers: { heading: name, tab: "Tab 1" },
-    // });
-
     navigate("/module", { state: { name: name } });
   };
   return (
@@ -16,7 +14,7 @@ const Menu = (props) => {
           src="https://cdn-icons-png.flaticon.com/512/15/15766.png"
           alt="home"
           onClick={() => {
-            navigate("/");
+            navigate("/"); //redirecting to home page
           }}
         />
       </div>
@@ -71,4 +69,5 @@ const Menu = (props) => {
     </>
   );
 };
+//exporting the Menu Component
 export default Menu;

@@ -1,16 +1,24 @@
-import "./Search.css";
-import axios from "axios";
+//importing useState and useNavigate hooks
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+//importing the search css file
+import "./Search.css";
+//importing axios
+import axios from "axios";
+
 const Search = () => {
+  //setting all the dependencies
   const navigate = useNavigate();
+
   const [data, setData] = useState([]);
+
   const [searchText, setSearchText] = useState("");
+  //seacrh handler for searching data
   const searchHandler = async () => {
     const res = await axios.get("http://localhost:5000/searchData", {
       headers: { heading: searchText },
     });
-    // console.log(res);
+
     setData(res.data);
   };
   return (
