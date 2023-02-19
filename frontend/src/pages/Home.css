@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.background1-div {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -100;
+  width: 100%;
+  height: 100%;
+
+  background-image: url("../images/background.png");
+  background-repeat: no-repeat;
+  height: 100%;
+}
+.image-div {
+  width: 60%;
+  /* background-image: url(https://www.zastavki.com/pictures/1280x800/2020Girls___Beautyful_Girls_Business_woman_in_suit_with_glasses_in_hand_148172_12.jpg); */
+}
+.home-div {
+  width: 30%;
+  position: absolute;
+  right: 10%;
+  top: 15%;
+}
+.home-div_h1 {
+  color: rgba(13, 79, 134, 255);
+  font-size: 300%;
+}
+.home-div_p {
+  margin-top: 20px;
+  color: rgba(13, 79, 134, 255);
+  font-size: 120%;
+}
+.home-div_button {
+  margin-top: 40px;
+  height: 60px;
+  width: 100%;
+  border-radius: 100px;
+  border: none;
+  background-color: rgba(13, 79, 134, 255);
+  color: #fff;
+  font-size: 140%;
+}
+.home-div_button span {
+  font-size: x-large;
+}

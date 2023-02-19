@@ -1,0 +1,17 @@
+.home-img-div {
+  position: absolute;
+  right: 0%;
+  margin: 20px;
+}
+.home-img-div img {
+  height: 40px;
+}
+.search-img-div {
+  position: absolute;
+  right: 5%;
+  margin: 20px;
+}
+.search-img-div img {
+  height: 60px;
+  border-radius: 100px;
+}
