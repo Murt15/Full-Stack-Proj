@@ -14,7 +14,7 @@
 	
 	Now start the express server by npm start
 	
-	Now start the react by npm start
+	Now start the react server by npm start
 	
 	And the  application would be running successfully by now.
   
